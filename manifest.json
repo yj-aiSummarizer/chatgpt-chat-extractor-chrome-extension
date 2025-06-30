@@ -4,7 +4,7 @@
   "version": "1.0",
   "description": "ChatGPT 대화를 선택해서 요약 서버로 전송합니다.",
   "permissions": ["scripting", "activeTab", "storage"],
-  "host_permissions": ["https://chat.openai.com/*"],
+  "host_permissions": ["http://localhost:8081/", "<all_urls>"],
   "action": {
     "default_popup": "popup.html"
   },
