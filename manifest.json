@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Summarizer",
+  "version": "1.0",
+  "description": "ChatGPT 대화를 선택해서 요약 서버로 전송합니다.",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "host_permissions": ["https://chat.openai.com/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
